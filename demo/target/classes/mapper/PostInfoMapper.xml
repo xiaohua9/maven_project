@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.learn.mapper.MapperI">
+    <insert id="insert"  parameterType="com.learn.entity.PostInfo" >
+        insert into postinfo values (null,#{title},#{postTime},#{clickNum},#{content},#{topicId},#{pic})
+    </insert>
+    <delete id="delete" parameterType="int">
+        delete from postinfo where id=#{id}
+    </delete>
+    <update id="update" parameterType="com.learn.entity.PostInfo">
+        update postinfo set title=#{title},postTime=#{postTime},clickNum=#{clickNum},content=#{content},topicId=#{topicId},pic=#{pic} where id=${id}
+    </update>
+    <select id="findAll"  resultType="com.learn.entity.PostInfo">
+        select * from postinfo
+    </select>
+    <select id="find" resultType="com.learn.entity.PostInfo" parameterType="int">
+        select * from postinfo where id=#{id}
+    </select>
+</mapper>
+		
