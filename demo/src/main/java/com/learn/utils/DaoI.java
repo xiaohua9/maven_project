@@ -1,9 +1,11 @@
-package com.learn.mapper;
+package com.learn.utils;
+
+import com.learn.entity.PostInfo;
 
 import java.util.List;
 
 //dao的顶层泛型接口
-public interface MapperI<T> {
+public interface DaoI<T> {
     //插入数据
     public int insert(T t);
     //删除数据
@@ -13,5 +15,5 @@ public interface MapperI<T> {
     //查询一条数据
     public T select(Object parameter);
     //按条件分页查询所有数据
-    public List<T> selectAll();
+    public List<T> selectAll(T t);
 }
