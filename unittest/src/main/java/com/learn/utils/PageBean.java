@@ -1,6 +1,8 @@
 package com.learn.utils;
 
 
+import com.learn.entity.BookInfo;
+
 import java.util.List;
 
 //用于分页显示的页面数据类
@@ -10,7 +12,7 @@ public class PageBean {
     private int totalPages;
     private int currentPage=1;
     private int rows;
-    //private List<Student> student;//类型为要操作的数据类型
+    private List<BookInfo> bookInfos;//类型为要操作的数据类型
 
     public int getPageSize() {
         return pageSize;
@@ -55,11 +57,11 @@ public class PageBean {
         }
     }
 
-   /* public List<Student> getStudent() {
-        return student;
+    public List<BookInfo> getBookInfos() {
+        return bookInfos;
     }
 
-    public void setStudent(List<Student> student) {
-        this.student = student;
-    }*/
+    public void setBookInfos(List<BookInfo> bookInfos) {
+        this.bookInfos = bookInfos;
+    }
 }

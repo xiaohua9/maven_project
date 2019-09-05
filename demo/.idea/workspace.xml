@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50876b0e-2d34-4cc8-b464-dcc33b01d35a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/mapper/MapperI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/utils/DaoI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/mapper/PostInfoMapperI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/mapper/PostInfoMapperI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/mapper/impl/PostInfoMapperImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PostInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PostInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/PostInfoMapperImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/PostInfoMapperImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/learn/mapper/MapperI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/learn/mapper/PostInfoMapperI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/learn/mapper/PostInfoMapperI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/learn/mapper/impl/PostInfoMapperImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/PostInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/PostInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PostInfoMapperImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/PostInfoMapperImplTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../forum/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../unittest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../unittest/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="50876b0e-2d34-4cc8-b464-dcc33b01d35a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +13,7 @@
     <session id="1483588763">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.6" value="1" />
@@ -221,7 +205,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="18" />
     <option name="y" value="25" />
     <option name="width" value="980" />
@@ -347,7 +331,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567594584420" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567594591611" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../forum" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -531,7 +515,7 @@
       <updated>1567477303132</updated>
       <workItem from="1567477309451" duration="13325000" />
       <workItem from="1567554861041" duration="1189000" />
-      <workItem from="1567559656764" duration="10862000" />
+      <workItem from="1567559656764" duration="11125000" />
     </task>
     <servers />
   </component>
@@ -568,10 +552,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25376000" />
+    <option name="totallyTimeSpent" value="25639000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
