@@ -59,14 +59,24 @@
     板块:
     <select name="currentTopicId">
         <option value="">全部</option>
-        <c:forEach items="${sessionScope.topics}" var="topic">
-            <c:if test="${topic.topicId==requestScope.currentTopicId}">
-                <option value="${topic.topicId}" selected="selected">${topic.topicName}</option>
-            </c:if>
-            <c:if test="${topic.topicId!=requestScope.currentTopicId}">
-                <option value="${topic.topicId}" >${topic.topicName}</option>
-            </c:if>
-        </c:forEach>
+        <c:if test="${1==requestScope.currentTopicId}">
+            <option value="1" selected="selected" >娱乐</option>
+        </c:if>
+        <c:if test="${1!=requestScope.currentTopicId}">
+            <option value="1" >娱乐</option>
+        </c:if>
+        <c:if test="${2==requestScope.currentTopicId}">
+            <option value="2" selected="selected" >军事</option>
+        </c:if>
+        <c:if test="${2!=requestScope.currentTopicId}">
+            <option value="2" >军事</option>
+        </c:if>
+        <c:if test="${3==requestScope.currentTopicId}">
+            <option value="3" selected="selected" >科技</option>
+        </c:if>
+        <c:if test="${3!=requestScope.currentTopicId}">
+            <option value="3" >科技</option>
+        </c:if>
     </select>
     点击数：<input type="text" name="currentBegain" value="${requestScope.currentBegain}" />到<input type="text" name="currentEnd" value="${requestScope.currentEnd}" />
     <input type="submit" value="查询"/>
@@ -76,31 +86,25 @@
     <tr>
         <td>编号</td><td>标题</td><td>发帖时间</td><td>点击数</td><td>板块名称</td><td>删除</td><td>修改</td><td>详情</td>
     </tr>
-    <c:forEach items="${requestScope.pageBean.postInfo}" var="postInfo" >
+    <c:forEach items="${requestScope.pageBean.list}" var="postInfo" >
             <tr class="trColor">
                 <td>${postInfo.id}</td>
                 <td>${postInfo.title}</td>
                 <td>${postInfo.postTime}</td>
                 <td>${postInfo.clickNum}</td>
-                <td>
-                    <c:forEach items="${sessionScope.topics}" var="topic">
-                        <c:if test="${topic.topicId==postInfo.topicId}">
-                            ${topic.topicName}
-                        </c:if>
-                    </c:forEach>
-                </td>
+                <td>${postInfo.topic.topicName}</td>
                 <td><a  href="javascript:void(0)" name="${postInfo.id}" class="deleteOne" >删除</a></td>
-                <td><a href="/view/ChangePostInfo.jsp?id=${postInfo.id}&title=${postInfo.title}&postTime=${postInfo.postTime}&clickNum=${postInfo.clickNum}&content=${postInfo.content}&topicId=${postInfo.topicId}&pic=${postInfo.pic}" >修改</a></td>
+                <td><a href="/view/ChangePostInfo.jsp?id=${postInfo.id}&title=${postInfo.title}&postTime=${postInfo.postTime}&clickNum=${postInfo.clickNum}&content=${postInfo.content}&topicId=${postInfo.topic.topicId}&pic=${postInfo.pic}" >修改</a></td>
                 <td><a href="PostInfoServlet?method=find&id=${postInfo.id}">详细</a></td>
             </tr>
     </c:forEach>
     <tr><td colspan="8" align="center">
         <a  href="javascript:void(0)"  name="1" class="pageChoose" >首页</a>
-        <a  href="javascript:void(0)"  name="${requestScope.pageBean.currentPage-1}" class="pageChoose" >上一页</a>
-        <a  href="javascript:void(0)"  name="${requestScope.pageBean.currentPage+1}" class="pageChoose" >下一页</a>
-        <a  href="javascript:void(0)"  name="${requestScope.pageBean.totalPages}" class="pageChoose" >尾页</a>
-        ${requestScope.pageBean.currentPage}/${requestScope.pageBean.totalPages}页
-        <input type="text" id="goto" value="${requestScope.pageBean.currentPage}" style="width: 70px"/><input type="button" value="跳转" id="buttonGo" />
+        <a  href="javascript:void(0)"  name="${requestScope.pageBean.prePage}" class="pageChoose" >上一页</a>
+        <a  href="javascript:void(0)"  name="${requestScope.pageBean.nextPage}" class="pageChoose" >下一页</a>
+        <a  href="javascript:void(0)"  name="${requestScope.pageBean.lastPage}" class="pageChoose" >尾页</a>
+        ${requestScope.pageBean.pageNum}/${requestScope.pageBean.pages}页
+        <input type="text" id="goto" value="${requestScope.pageBean.pageNum}" style="width: 70px"/><input type="button" value="跳转" id="buttonGo" />
     </td></tr>
 </table>
 </body>

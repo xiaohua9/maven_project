@@ -12,7 +12,7 @@
     <input type="hidden" name="postTime" value="${requestScope.postInfo.postTime}"/>
     <input type="hidden" name="clickNum" value="${requestScope.postInfo.clickNum+1}"/><%--点击数加1--%>
     <input type="hidden" name="content" value="${requestScope.postInfo.content}"/>
-    <input type="hidden" name="topicId" value="${requestScope.postInfo.topicId}"/>
+    <input type="hidden" name="topicId" value="${requestScope.postInfo.topic.topicId}"/>
     <input type="hidden" name="pic" value="${requestScope.postInfo.pic}"/>
     <h1>显示信息</h1>
     <table border="1px" width="600px">
@@ -22,11 +22,7 @@
         <tr>
             <td>帖子类别</td>
             <td>
-                    <c:forEach items="${sessionScope.topics}" var="topic">
-                        <c:if test="${topic.topicId==requestScope.postInfo.topicId}">
-                            ${topic.topicName}
-                        </c:if>
-                    </c:forEach>
+                    ${requestScope.postInfo.topic.topicName}
             </td>
         </tr>
         <tr>

@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.learn.mapper.PostInfoMapperI">
     <insert id="insert"  parameterType="com.learn.entity.PostInfo" >
-        insert into postinfo values (null,#{title},#{postTime},#{clickNum},#{content},#{topicId},#{pic})
+        insert into postinfo values (null,#{title},#{postTime},#{clickNum},#{content},#{topic.topicId},#{pic})
     </insert>
     <delete id="delete" parameterType="int">
         delete from postinfo where id=#{id}
@@ -16,7 +16,7 @@
             <if test="postTime!=null">postTime=#{postTime},</if>
             <if test="clickNum!=0">clickNum=#{clickNum},</if>
             <if test="content!=null">content=#{content},</if>
-            <if test="topicId!=0">topicId=#{topicId},</if>
+            <if test="topic.topicId!=0">topicId=#{topic.topicId},</if>
             <if test="pic!=null">pic=#{pic}</if>
         </trim>
         where id=${id}
@@ -26,12 +26,10 @@
             <if test="currentShortTitle !=null and currentShortTitle.trim()!=''">
                 and title like '%${currentShortTitle}%'/*模糊查询实现方法*/
             </if>
-            <if test="currentTopicId !=0">
+            <if test="currentTopicId !=null and currentTopicId.trim()!=''">
                 and p.topicId=#{currentTopicId}
             </if>
-
     </select>
-
     <select id="select" resultMap="PostInfoMap" parameterType="int">
         select p.id,p.title,p.postTime,p.clickNum,p.content,p.pic,t.topicId,t.topicName from postinfo p,topic t where p.topicId=t.topicId and id=#{id}
     </select>

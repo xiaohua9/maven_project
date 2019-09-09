@@ -10,7 +10,7 @@ import java.util.List;
 public class PostInfoMapperImplTest {
     SqlSession session = GetSession.getSession();
     PostInfoMapperI mapper = session.getMapper(PostInfoMapperI.class);
-    @Test
+  /*  @Test
     public void testInsert(){
         PostInfo postInfo=new PostInfo("军事sss","2019-12-1 12:1:1",12,"kkkkkk",1,"sss.aa");
         mapper.insert(postInfo);
@@ -26,7 +26,7 @@ public class PostInfoMapperImplTest {
         postInfo.setTitle("lop");
         postInfo.setId(16);
         mapper.update(postInfo);
-    }
+    }*/
     @Test
     public void testSelect(){
         PostInfo select = mapper.select(1);
@@ -34,10 +34,7 @@ public class PostInfoMapperImplTest {
     }
     @Test
     public void testSelectAll(){
-        PostInfo postInfo =new PostInfo();
-        postInfo.setTitle("a");
-        postInfo.setTopicId(1);
-        List<PostInfo> postInfos = mapper.selectAll(postInfo);
+        List<PostInfo> postInfos = mapper.selectAll("a",2,1,10);
         for (PostInfo post:postInfos){
             System.out.println(post);
         }

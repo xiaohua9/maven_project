@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface PostInfoMapperI{
+public interface PostInfoMapperI {
     //插入数据
     public int insert(PostInfo postInfo);
     //删除数据
@@ -15,5 +15,5 @@ public interface PostInfoMapperI{
     //查询一条数据
     public PostInfo select(Object parameter);
     //按条件查询所有数据
-    public List<PostInfo> selectAll(@Param("currentShortTitle") String currentShortTitle, @Param("currentTopicId") int currentTopicId, @Param("currentBegain") int currentBegain, @Param("currentEnd") int currentEnd );
+    public List<PostInfo> selectAll(@Param("currentShortTitle") String currentShortTitle, @Param("currentTopicId") String currentTopicId, @Param("currentBegain") String currentBegain, @Param("currentEnd") String currentEnd);
 }

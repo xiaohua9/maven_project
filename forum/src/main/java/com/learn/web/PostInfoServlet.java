@@ -1,14 +1,14 @@
 package com.learn.web;
 
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.learn.entity.PostInfo;
 import com.learn.entity.Topic;
-import com.learn.service.PostInfoServiceI;
-import com.learn.service.TopicServiceI;
-import com.learn.service.impl.PostInfoServiceImpl;
-import com.learn.service.impl.TopicServiceImpl;
+import com.learn.mapper.PostInfoMapperI;
 import com.learn.utils.EmptyUtils;
-import com.learn.utils.PageBean;
+import com.learn.utils.GetSession;
+import org.apache.ibatis.session.SqlSession;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,8 +20,8 @@ import java.util.List;
 
 @WebServlet(name = "PostInfoServlet",urlPatterns = "/view/PostInfoServlet")
 public class PostInfoServlet extends HttpServlet {
-    PostInfoServiceI postInfoService=new PostInfoServiceImpl();//获取帖子服务层对象
-    TopicServiceI topicService=new TopicServiceImpl();//获取类型服务对象
+    SqlSession session = GetSession.getSession();//得到数据库操作的持久化对象
+    PostInfoMapperI mapper = session.getMapper(PostInfoMapperI.class);//动态实现类
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //将前端的请求数据解码
         request.setCharacterEncoding("utf-8");
@@ -49,9 +49,21 @@ public class PostInfoServlet extends HttpServlet {
         int clickNum = Integer.parseInt(req.getParameter("clickNum"));
         String content = req.getParameter("content");
         int topicId = Integer.parseInt(req.getParameter("topicId"));
+        Topic topic=new Topic();
+        if (topicId==1){
+            topic.setTopicId(1);
+            topic.setTopicName("娱乐");
+        }else if (topicId==2){
+            topic.setTopicId(2);
+            topic.setTopicName("军事");
+        }else if (topicId==3){
+            topic.setTopicId(3);
+            topic.setTopicName("科技");
+        }
         String pic = req.getParameter("pic");
-        PostInfo postInfo=new PostInfo(title,postTime,clickNum,content,topicId,pic);//新增对象
-        int flag = this.postInfoService.insert(postInfo);//将数据加入数据库，flag接收影响的行数
+        PostInfo postInfo=new PostInfo(title,postTime,clickNum,content,topic,pic);//新增对象
+        int flag = this.mapper.insert(postInfo);//将数据加入数据库，flag接收影响的行数
+        session.commit();
         if (flag>0){
             //插入成功
             resp.setContentType("text/html;charset=UTF-8");//设置回应数据的编码
@@ -66,7 +78,8 @@ public class PostInfoServlet extends HttpServlet {
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String id = req.getParameter("id");//获取超链接提交的需要删除的学号
         PostInfo postInfo = new PostInfo(Integer.parseInt(id));//构造临时贴
-        int delete = this.postInfoService.delete(postInfo);//删除
+        int delete = this.mapper.delete(postInfo);//删除
+        session.commit();
         resp.getWriter().print(delete);//将影响的行数回应给ajax请求
     }
     //更改服务中心
@@ -79,8 +92,20 @@ public class PostInfoServlet extends HttpServlet {
         String content = req.getParameter("content");
         int topicId = Integer.parseInt(req.getParameter("topicId"));
         String pic = req.getParameter("pic");
-        PostInfo postInfo=new PostInfo(id,title,postTime,clickNum,content,topicId,pic);//构造对象
-        int update = this.postInfoService.update(postInfo);//修改
+        Topic topic=new Topic();
+        if (topicId==1){
+            topic.setTopicId(1);
+            topic.setTopicName("娱乐");
+        }else if (topicId==2){
+            topic.setTopicId(2);
+            topic.setTopicName("军事");
+        }else if (topicId==3){
+            topic.setTopicId(3);
+            topic.setTopicName("科技");
+        }
+        PostInfo postInfo=new PostInfo(id,title,postTime,clickNum,content,topic,pic);//构造对象
+        int update = this.mapper.update(postInfo);//修改
+        session.commit();
         if (update>0){
             resp.setContentType("text/html;charset=UTF-8");//设置回应数据的编码
             resp.getWriter().print("<script>alert('修改成功');location.href='/view/PostInfoServlet'</script>");
@@ -92,7 +117,6 @@ public class PostInfoServlet extends HttpServlet {
     }
     //查找全部
     protected void doFindAll(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        PageBean pageBean = new PageBean();//构造一个页面显示信息类对象
         String currentShortTitle = req.getParameter("currentShortTitle");//获取当前条件
         String currentTopicId = req.getParameter("currentTopicId");
         String currentBegain = req.getParameter("currentBegain");
@@ -103,16 +127,14 @@ public class PostInfoServlet extends HttpServlet {
         if (EmptyUtils.isEmpty(currentEnd)){
             currentEnd=""+100;
         }
-        pageBean.setRows(this.postInfoService.selectCount(currentShortTitle,currentTopicId,currentBegain,currentEnd));//获取总行数，并赋值,必须要放在这个位置，至少不能放在当前页数设置后面
         String page = req.getParameter("page");//获取前端提交过来的页数
-        if (!EmptyUtils.isEmpty(page)){//在不为空的情况下进行当前页数设置
-            int i = Integer.parseInt(page);
-            pageBean.setCurrentPage(i);
+        int i=1;
+        if (!EmptyUtils.isEmpty(page)){
+            i=Integer.parseInt(page);
         }
-        List<PostInfo> postInfo = this.postInfoService.selectAll(pageBean.getCurrentPage(),pageBean.getPageSize(),currentShortTitle,currentTopicId,currentBegain,currentEnd);//获取分页数据
-        pageBean.setPostInfo(postInfo);//将查到的数据赋值进页面对象
-        List<Topic> topics = this.topicService.selectAll();//获取所有类型
-        req.getSession().setAttribute("topics",topics);//包装类型数据,用于条件选择
+        PageHelper.startPage(i,3,true);//分页设置
+        List<PostInfo> postInfos = this.mapper.selectAll(currentShortTitle,currentTopicId,currentBegain,currentEnd);//获取分页数据
+        PageInfo<PostInfo> pageBean=new PageInfo<>(postInfos);
         req.setAttribute("pageBean",pageBean);//包装页面数据和查询结果
         req.setAttribute("currentShortTitle",currentShortTitle);//将前端提交的条件返回用于回显
         req.setAttribute("currentTopicId",currentTopicId);
@@ -122,8 +144,9 @@ public class PostInfoServlet extends HttpServlet {
     }
     //查找一个
     protected void doFind(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String id = req.getParameter("id");
-        PostInfo postInfo = postInfoService.select(id);
+        int id = Integer.parseInt(req.getParameter("id"));
+        PostInfo postInfo = this.mapper.select(id);
+        System.out.println(postInfo);
         req.setAttribute("postInfo",postInfo);
         req.getRequestDispatcher("/view/OnePostInfo.jsp").forward(req,resp);
     }

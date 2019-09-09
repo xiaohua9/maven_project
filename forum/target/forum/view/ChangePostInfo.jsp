@@ -52,14 +52,24 @@
             <td>帖子类别</td>
             <td>
                 <select name="topicId">
-                    <c:forEach items="${sessionScope.topics}" var="topic">
-                        <c:if test="${topic.topicId==param.topicId}">
-                            <option value="${topic.topicId}" selected="selected">${topic.topicName}</option>
-                        </c:if>
-                        <c:if test="${topic.topicId!=param.topicId}">
-                            <option value="${topic.topicId}" >${topic.topicName}</option>
-                        </c:if>
-                    </c:forEach>
+                    <c:if test="${1==param.topicId}">
+                        <option value="1" selected="selected" >娱乐</option>
+                    </c:if>
+                    <c:if test="${1!=param.topicId}">
+                        <option value="1" >娱乐</option>
+                    </c:if>
+                    <c:if test="${2==param.topicId}">
+                        <option value="2" selected="selected" >军事</option>
+                    </c:if>
+                    <c:if test="${2!=param.topicId}">
+                        <option value="2" >军事</option>
+                    </c:if>
+                    <c:if test="${3==param.topicId}">
+                        <option value="3" selected="selected" >科技</option>
+                    </c:if>
+                    <c:if test="${1!=param.topicId}">
+                        <option value="3" >科技</option>
+                    </c:if>
                 </select>
             </td>
         </tr>

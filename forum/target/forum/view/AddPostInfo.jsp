@@ -49,9 +49,9 @@
             <td>帖子类别</td>
             <td>
                 <select name="topicId">
-                    <c:forEach items="${sessionScope.topics}" var="topic">
-                        <option value="${topic.topicId}">${topic.topicName}</option>
-                    </c:forEach>
+                    <option value="1">娱乐</option>
+                    <option value="2">军事</option>
+                    <option value="3">科技</option>
                 </select>
             </td>
         </tr>

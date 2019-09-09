@@ -6,7 +6,7 @@ public class PostInfo {
     private String postTime;
     private  int clickNum;
     private String content;
-    private int topicId;
+    private Topic topic;
     private String pic;
 
     public PostInfo() {
@@ -16,22 +16,22 @@ public class PostInfo {
         this.id = id;
     }
 
-    public PostInfo(String title, String postTime, int clickNum, String content, int topicId, String pic) {
+    public PostInfo(String title, String postTime, int clickNum, String content, Topic topic, String pic) {
         this.title = title;
         this.postTime = postTime;
         this.clickNum = clickNum;
         this.content = content;
-        this.topicId = topicId;
+        this.topic = topic;
         this.pic = pic;
     }
 
-    public PostInfo(int id, String title, String postTime, int clickNum, String content, int topicId, String pic) {
+    public PostInfo(int id, String title, String postTime, int clickNum, String content, Topic topic, String pic) {
         this.id = id;
         this.title = title;
         this.postTime = postTime;
         this.clickNum = clickNum;
         this.content = content;
-        this.topicId = topicId;
+        this.topic = topic;
         this.pic = pic;
     }
 
@@ -75,12 +75,12 @@ public class PostInfo {
         this.content = content;
     }
 
-    public int getTopicId() {
-        return topicId;
+    public Topic getTopic() {
+        return topic;
     }
 
-    public void setTopicId(int topicId) {
-        this.topicId = topicId;
+    public void setTopic(Topic topic) {
+        this.topic = topic;
     }
 
     public String getPic() {
@@ -99,7 +99,7 @@ public class PostInfo {
                 ", postTime='" + postTime + '\'' +
                 ", clickNum=" + clickNum +
                 ", content='" + content + '\'' +
-                ", topicId=" + topicId +
+                ", topic=" + topic +
                 ", pic='" + pic + '\'' +
                 '}';
     }

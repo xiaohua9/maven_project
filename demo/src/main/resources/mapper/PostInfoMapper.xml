@@ -21,19 +21,31 @@
         </trim>
         where id=${id}
     </update>
-    <select id="selectAll"  resultType="com.learn.entity.PostInfo" parameterType="com.learn.entity.PostInfo">
-        select * from postinfo
-        <where>
-            <if test="title!=null and title.trim()!=''">
-                and title like '%${title}%'/*模糊查询实现方法*/
+    <select id="selectAll"  resultMap="PostInfoMap" >
+        select p.id,p.title,p.postTime,p.clickNum,p.content,p.pic,t.topicId,t.topicName from postinfo p,topic t where p.topicId=t.topicId and p.clickNum between #{currentBegain} and #{currentEnd}
+            <if test="currentShortTitle !=null and currentShortTitle.trim()!=''">
+                and title like '%${currentShortTitle}%'/*模糊查询实现方法*/
             </if>
-            <if test="topicId!=0">
-                and topicId=#{topicId}
+            <if test="currentTopicId !=0">
+                and p.topicId=#{currentTopicId}
             </if>
-        </where>
+
     </select>
-    <select id="select" resultType="com.learn.entity.PostInfo" parameterType="int">
-        select * from postinfo where id=#{id}
+
+    <select id="select" resultMap="PostInfoMap" parameterType="int">
+        select p.id,p.title,p.postTime,p.clickNum,p.content,p.pic,t.topicId,t.topicName from postinfo p,topic t where p.topicId=t.topicId and id=#{id}
     </select>
+    <resultMap id="PostInfoMap" type="com.learn.entity.PostInfo"><!--结果映射-->
+        <id property="id" column="id"></id>
+        <result property="title" column="title"></result>
+        <result property="postTime" column="postTime"></result>
+        <result property="clickNum" column="clickNum"></result>
+        <result property="content" column="content"></result>
+        <result property="pic" column="pic"></result>
+        <association property="topic" javaType="com.learn.entity.Topic">
+            <id property="topicId" column="topicId"></id>
+            <result property="topicName" column="topicName"></result>
+        </association>
+    </resultMap>
 </mapper>
 		
