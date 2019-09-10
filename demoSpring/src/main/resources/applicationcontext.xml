@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd" default-lazy-init="true" default-autowire="byName">
+    <bean id="userDao" class="com.learn.dao.impl.UserDaoImpl"></bean>
+    <bean id="userService" class="com.learn.service.impl.UserServiceImpl"></bean>
+    <!--采用按名字自动注入的时候，对bean的id命名要求很高，必须时set方法去掉set后首字小写的名字-->
+</beans>
