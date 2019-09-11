@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd" default-lazy-init="true" default-autowire="byName">
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd" default-lazy-init="true" default-autowire="byName">
+
     <bean id="userDao" class="com.learn.dao.impl.UserDaoImpl"></bean>
     <bean id="userService" class="com.learn.service.impl.UserServiceImpl"></bean>
-    <!--采用按名字自动注入的时候，对bean的id命名要求很高，必须时set方法去掉set后首字小写的名字-->
+    <bean id="aspectUserServiceImpl" class="com.learn.utils.AspectUserServiceImpl"></bean><!--将切面类托管到spring-->
+    <aop:config><!--将切面类与切点类关联-->
+        <!--首先定义哪些类要作为切点类-->
+        <aop:pointcut id="pointCut" expression="execution(* com.learn.service.impl.*.*(..))"></aop:pointcut>
+        <!--将切面类的方法增强到上方指定的切点类的方法中去-->
+        <aop:aspect ref="aspectUserServiceImpl"><!--先引入切面类再指定使用哪个切面方法以怎样的方式进行增强-->
+            <aop:before method="before" pointcut-ref="pointCut"></aop:before>
+            <aop:after method="after" pointcut-ref="pointCut"></aop:after>
+            <aop:around method="around" pointcut-ref="pointCut"></aop:around>
+        </aop:aspect>
+    </aop:config>
+    <!--采用按名字自动注入的时候，对bean的id命名要求很高，必须是set方法去掉set后首字小写的名字-->
 </beans>
