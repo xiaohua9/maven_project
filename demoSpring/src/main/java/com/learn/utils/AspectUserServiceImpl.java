@@ -2,6 +2,8 @@ package com.learn.utils;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 
+import java.util.Date;
+
 public class AspectUserServiceImpl {
     public void before(){
         System.out.println("执行前的增强");
@@ -16,6 +18,7 @@ public class AspectUserServiceImpl {
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
+        LogUtils.logger.info("操作时间："+new Date().toLocaleString()+";操作类："+proceedingJoinPoint.getTarget().getClass().getSimpleName()+";操作方法："+proceedingJoinPoint.getSignature());
         System.out.println("执行前后都要增强的功能1");
     }
 }

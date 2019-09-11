@@ -20,5 +20,5 @@
             <aop:around method="around" pointcut-ref="pointCut"></aop:around>
         </aop:aspect>
     </aop:config>
-    <!--采用按名字自动注入的时候，对bean的id命名要求很高，必须时set方法去掉set后首字小写的名字-->
+    <!--采用按名字自动注入的时候，对bean的id命名要求很高，必须是set方法去掉set后首字小写的名字-->
 </beans>
