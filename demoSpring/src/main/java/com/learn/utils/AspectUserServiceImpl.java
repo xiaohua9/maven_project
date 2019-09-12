@@ -1,24 +1,21 @@
 package com.learn.utils;
 
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
-
+@Component
 public class AspectUserServiceImpl {
-    public void before(){
-        System.out.println("执行前的增强");
-    }
-    public void after(){
-        System.out.println("执行后的增强");
-    }
-    public void around(ProceedingJoinPoint proceedingJoinPoint){
+    public Object around(ProceedingJoinPoint proceedingJoinPoint){
         System.out.println("执行前后都要增强的功能1");
+        Object proceed=null;
         try {
-            proceedingJoinPoint.proceed();
+            proceed = proceedingJoinPoint.proceed();
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
         LogUtils.logger.info("操作时间："+new Date().toLocaleString()+";操作类："+proceedingJoinPoint.getTarget().getClass().getSimpleName()+";操作方法："+proceedingJoinPoint.getSignature());
         System.out.println("执行前后都要增强的功能1");
+        return proceed;
     }
 }

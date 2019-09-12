@@ -1,15 +1,15 @@
 package com.learn.service.impl;
 import com.learn.dao.UserDao;
+import com.learn.entity.User;
 import com.learn.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component(value = "userService")
 public class UserServiceImpl implements UserService {
+    @Autowired
     UserDao userDao;
-    //依赖注入所必须的set方法
-    public void setUserDao(UserDao userDao) {
-        this.userDao = userDao;
-    }
-
-    public void insert() {
-        userDao.insert();//注入成功的情况下就不会有空指针异常
+    public void insert(User user) {
+        userDao.insert(user);//注入成功的情况下就不会有空指针异常
     }
 }

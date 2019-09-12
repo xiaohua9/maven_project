@@ -2,23 +2,32 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/aop
-       http://www.springframework.org/schema/aop/spring-aop.xsd" default-lazy-init="true" default-autowire="byName">
-
-    <bean id="userDao" class="com.learn.dao.impl.UserDaoImpl"></bean>
-    <bean id="userService" class="com.learn.service.impl.UserServiceImpl"></bean>
-    <bean id="aspectUserServiceImpl" class="com.learn.utils.AspectUserServiceImpl"></bean><!--将切面类托管到spring-->
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd" >
+    <context:component-scan base-package="com.learn"></context:component-scan><!--扫描出使用了spring组件申明的类-->
     <aop:config><!--将切面类与切点类关联-->
         <!--首先定义哪些类要作为切点类-->
-        <aop:pointcut id="pointCut" expression="execution(* com.learn.service.impl.*.*(..))"></aop:pointcut>
+        <aop:pointcut id="pointCut" expression="execution(* com.learn.dao.impl.*.*(..))"></aop:pointcut>
         <!--将切面类的方法增强到上方指定的切点类的方法中去-->
         <aop:aspect ref="aspectUserServiceImpl"><!--先引入切面类再指定使用哪个切面方法以怎样的方式进行增强-->
-            <aop:before method="before" pointcut-ref="pointCut"></aop:before>
-            <aop:after method="after" pointcut-ref="pointCut"></aop:after>
             <aop:around method="around" pointcut-ref="pointCut"></aop:around>
         </aop:aspect>
     </aop:config>
     <!--采用按名字自动注入的时候，对bean的id命名要求很高，必须是set方法去掉set后首字小写的名字-->
+    <!--托管C3p0及完成配置-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="user" value="root"></property>
+        <property name="password" value="root"></property>
+        <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/xiaohua?characterEncoding=utf8"></property>
+    </bean>
+    <!--将数据库连接池配置到spring的jdbc中-->
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
 </beans>
