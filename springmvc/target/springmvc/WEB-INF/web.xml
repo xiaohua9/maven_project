@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         id="WebApp_ID" version="3.0">
+  <!-- 配置前端控制器 -->
+  <servlet>
+    <servlet-name>springmvc</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <!--改变springmvc配置文件的默认位置-->
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath*:springmvc/springmvc-servlet.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup><!--开启服务时加载-->
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>springmvc</servlet-name>
+    <!-- 所有请求要经过这个DispatcherServlet来处理 -->
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+</web-app>
