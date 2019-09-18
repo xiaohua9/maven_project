@@ -10,8 +10,10 @@
         http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
     <!--包扫描-->
     <context:component-scan base-package="com.learn.controler"/>
+    <mvc:annotation-driven/>
     <!--使静态图片资源不被拦截-->
     <mvc:resources mapping="/images/**" location="/images/"></mvc:resources>
+    <mvc:resources mapping="/js/**" location="/js/"></mvc:resources>
     <!--将服务器返回的字符串拼接成某一个视图的定位，针对转发而言-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/view/"/>

@@ -4,7 +4,9 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
+
 @Controller//注册到框架中
 @SessionAttributes(names = "user")//将user加入request时，同时加入session
 @Scope("prototype")//将默认的单例改成多例
@@ -17,5 +19,11 @@ public class UserControler {
         modelMap.put("user",new User(userName,password));
         /*return "redirect:/view/success.jsp";*///重定向
         return "success";//转发
+    }
+    @RequestMapping("/view/getJson")
+    @ResponseBody//使返回的类型成为json对象的数据
+    public User getJson(String userName){
+        User user=new User(userName,"admin");
+        return user;
     }
 }
