@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.learn.mapper.UserDao">
+
+    <select id="findById" resultType="User" parameterType="int">
+        select * from user where id=#{id}
+    </select>
+
+    <select id="findAll" resultType="User" >
+        select * from user
+    </select>
+
+    <insert id="insert" parameterType="User">
+        insert into user values(null,#{name},#{age})
+    </insert>
+
+    <insert id="delete" parameterType="int">
+       delete  from user where id=#{id}
+    </insert>
+
+    <update id="update" parameterType="User">
+          update user set name=#{name },age=#{age} where id=#{id}
+    </update>
+</mapper>
