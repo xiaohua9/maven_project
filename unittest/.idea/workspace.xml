@@ -7,71 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e353b93-6660-4ac9-a919-8aa08d7a19bf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/src/main/java/com/learn/entity/PostInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/src/main/java/com/learn/entity/PostInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/src/main/java/com/learn/mapper/PostInfoMapperI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/src/main/java/com/learn/mapper/PostInfoMapperI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/src/main/java/com/learn/utils/DaoI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/src/main/resources/mapper/PostInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/src/main/resources/mapper/PostInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/src/main/resources/mybatis.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/src/main/resources/mybatis.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/src/main/test/PostInfoMapperImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/src/main/test/PostInfoMapperImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/target/classes/com/learn/entity/PostInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/target/classes/com/learn/entity/PostInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/target/classes/com/learn/mapper/PostInfoMapperI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/target/classes/com/learn/mapper/PostInfoMapperI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/target/classes/com/learn/utils/DaoI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/target/classes/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/target/classes/mapper/PostInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/target/classes/mapper/PostInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/target/classes/mybatis.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/target/classes/mybatis.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/target/test-classes/PostInfoMapperImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/target/test-classes/PostInfoMapperImplTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../forum/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../forum/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../forum/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/src/main/java/com/learn/dao/DaoI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/src/main/java/com/learn/dao/PostInfoDaoI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/src/main/java/com/learn/dao/TopicDaoI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/src/main/java/com/learn/dao/impl/PostInfoDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/src/main/java/com/learn/dao/impl/TopicDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/src/main/java/com/learn/entity/PostInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../forum/src/main/java/com/learn/entity/PostInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/src/main/java/com/learn/service/PostInfoServiceI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/src/main/java/com/learn/service/TopicServiceI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/src/main/java/com/learn/service/impl/PostInfoServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/src/main/java/com/learn/service/impl/TopicServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/src/main/java/com/learn/utils/PageBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/src/main/java/com/learn/web/PostInfoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../forum/src/main/java/com/learn/web/PostInfoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/src/main/resources/c3p0-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/src/main/webapp/view/AddPostInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../forum/src/main/webapp/view/AddPostInfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/src/main/webapp/view/ChangePostInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../forum/src/main/webapp/view/ChangePostInfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/src/main/webapp/view/OnePostInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../forum/src/main/webapp/view/OnePostInfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/src/main/webapp/view/PostInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../forum/src/main/webapp/view/PostInfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/classes/c3p0-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/classes/com/learn/dao/DaoI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/classes/com/learn/dao/PostInfoDaoI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/classes/com/learn/dao/TopicDaoI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/classes/com/learn/dao/impl/PostInfoDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/classes/com/learn/dao/impl/TopicDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/classes/com/learn/entity/PostInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../forum/target/classes/com/learn/entity/PostInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/classes/com/learn/service/PostInfoServiceI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/classes/com/learn/service/TopicServiceI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/classes/com/learn/service/impl/PostInfoServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/classes/com/learn/service/impl/TopicServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/classes/com/learn/utils/PageBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/classes/com/learn/web/PostInfoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../forum/target/classes/com/learn/web/PostInfoServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/forum/WEB-INF/classes/c3p0-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/forum/WEB-INF/classes/com/learn/dao/DaoI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/forum/WEB-INF/classes/com/learn/dao/PostInfoDaoI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/forum/WEB-INF/classes/com/learn/dao/TopicDaoI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/forum/WEB-INF/classes/com/learn/dao/impl/PostInfoDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/forum/WEB-INF/classes/com/learn/dao/impl/TopicDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/forum/WEB-INF/classes/com/learn/entity/PostInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../forum/target/forum/WEB-INF/classes/com/learn/entity/PostInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/forum/WEB-INF/classes/com/learn/service/PostInfoServiceI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/forum/WEB-INF/classes/com/learn/service/TopicServiceI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/forum/WEB-INF/classes/com/learn/service/impl/PostInfoServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/forum/WEB-INF/classes/com/learn/service/impl/TopicServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/forum/WEB-INF/classes/com/learn/utils/PageBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/forum/WEB-INF/classes/com/learn/web/PostInfoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../forum/target/forum/WEB-INF/classes/com/learn/web/PostInfoServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/forum/view/AddPostInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../forum/target/forum/view/AddPostInfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/forum/view/ChangePostInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../forum/target/forum/view/ChangePostInfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/forum/view/OnePostInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../forum/target/forum/view/OnePostInfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../forum/target/forum/view/PostInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../forum/target/forum/view/PostInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ssm/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm/src/main/java/com/learn/utils/Dao.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -86,12 +24,12 @@
     <session id="-1429835138">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.35" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -131,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/learn/web/BookInfoServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="124" column="46" lean-forward="true" selection-start-line="124" selection-start-column="46" selection-end-line="124" selection-end-column="46" />
+            <state relative-caret-position="270">
+              <caret line="99" column="69" lean-forward="true" selection-start-line="99" selection-start-column="69" selection-end-line="99" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,7 +81,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/learn/dao/impl/BookInfoDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2525">
+            <state relative-caret-position="809">
               <caret line="111" column="91" selection-start-line="111" selection-start-column="91" selection-end-line="111" selection-end-column="91" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -155,7 +93,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/learn/entity/BookType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
+            <state relative-caret-position="509">
               <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
               <folding>
                 <element signature="e#230#231#0" expanded="true" />
@@ -173,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/view/BookInfo.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-466">
-              <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+            <state relative-caret-position="284">
+              <caret line="112" column="16" lean-forward="true" selection-start-line="112" selection-start-column="16" selection-end-line="112" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -185,8 +123,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/view/AddBook.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+            <state relative-caret-position="345">
+              <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -207,11 +148,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/view/ChangeBook.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+            <state relative-caret-position="325">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -219,8 +160,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/view/OneBook.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+            <state relative-caret-position="275">
+              <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -228,7 +172,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/learn/entity/BookInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1775">
+            <state relative-caret-position="509">
               <caret line="105" column="18" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="18" />
               <folding>
                 <element signature="e#357#358#0" expanded="true" />
@@ -351,9 +295,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="364" />
-    <option name="y" value="42" />
-    <option name="width" value="980" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -364,7 +308,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -506,13 +449,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567674317614" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../forum" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -632,17 +576,18 @@
       <workItem from="1567660197132" duration="13077000" />
       <workItem from="1567987739821" duration="1236000" />
       <workItem from="1568028750874" duration="613000" />
+      <workItem from="1568939172657" duration="5270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21938000" />
+    <option name="totallyTimeSpent" value="27208000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49917898" visible="true" weight="0.21709532" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49917898" visible="true" weight="0.22012103" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -763,19 +708,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/learn/dao/impl/BookInfoDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/learn/utils/PageBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2525">
-          <caret line="111" column="91" selection-start-line="111" selection-start-column="91" selection-end-line="111" selection-end-column="91" />
+        <state relative-caret-position="300">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1377#1378#0" expanded="true" />
+            <element signature="e#1409#1410#0" expanded="true" />
+            <element signature="e#1467#1468#0" expanded="true" />
+            <element signature="e#1509#1510#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/learn/service/impl/BookInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/learn/entity/BookType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
+        <state relative-caret-position="509">
           <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
           <folding>
             <element signature="e#230#231#0" expanded="true" />
@@ -792,37 +753,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/AddBook.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/learn/utils/PageBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1377#1378#0" expanded="true" />
-            <element signature="e#1409#1410#0" expanded="true" />
-            <element signature="e#1467#1468#0" expanded="true" />
-            <element signature="e#1509#1510#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/OneBook.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/learn/entity/BookInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1775">
+        <state relative-caret-position="509">
           <caret line="105" column="18" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="18" />
           <folding>
             <element signature="e#357#358#0" expanded="true" />
@@ -863,39 +796,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/learn/service/impl/BookInfoServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/learn/dao/impl/BookInfoDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="809">
+          <caret line="111" column="91" selection-start-line="111" selection-start-column="91" selection-end-line="111" selection-end-column="91" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/ChangeBook.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/learn/web/BookInfoServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="124" column="46" lean-forward="true" selection-start-line="124" selection-start-column="46" selection-end-line="124" selection-end-column="46" />
+        <state relative-caret-position="270">
+          <caret line="99" column="69" lean-forward="true" selection-start-line="99" selection-start-column="69" selection-end-line="99" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/AddBook.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/view/BookInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-466">
-          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+        <state relative-caret-position="284">
+          <caret line="112" column="16" lean-forward="true" selection-start-line="112" selection-start-column="16" selection-end-line="112" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/OneBook.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/ChangeBook.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
